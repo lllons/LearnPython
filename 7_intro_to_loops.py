@@ -11,15 +11,20 @@ Learning goals:
 def for_loop_examples():
     print("=== for loop examples ===")
 
+    # A for loop is best when you already have a collection of items.
+    # Real-world use: process each file, order, or student in a list.
     fruits = ["apple", "banana", "cherry"]
     for fruit in fruits:
         print("Fruit:", fruit)
 
     # range(start, stop, step)
+    # This creates numbers 2,4,6,8,10.
+    # Useful for counting patterns (like even-numbered seats).
     for number in range(2, 11, 2):
         print("Even number:", number)
 
     # Loop with index and value.
+    # enumerate() helps when position matters, like ranking results.
     for index, fruit in enumerate(fruits):
         print(f"Index {index}: {fruit}")
 
@@ -27,12 +32,16 @@ def for_loop_examples():
 def while_loop_examples():
     print("\n=== while loop examples ===")
 
+    # A while loop repeats while a condition stays True.
+    # Use it when you do NOT know exact loop count ahead of time
+    # (for example, retrying until valid user input is entered).
     count = 1
     while count <= 5:
         print("Count:", count)
         count += 1
 
     # break exits loop early.
+    # Real-world use: stop searching once the needed item is found.
     for value in range(1, 10):
         if value == 4:
             print("Stopping at 4")
@@ -40,12 +49,15 @@ def while_loop_examples():
         print("Value:", value)
 
     # continue skips this iteration.
+    # Useful for ignoring invalid values while keeping the loop running.
     for value in range(1, 6):
         if value == 3:
             continue
         print("Without 3:", value)
 
     # for-else runs else only if loop did NOT break.
+    # This pattern is great for search tasks:
+    # if found -> break, otherwise else explains "not found".
     target = 7
     for value in [2, 4, 6, 8]:
         if value == target:
@@ -58,6 +70,8 @@ def while_loop_examples():
 def mini_task_examples():
     print("\n=== mini task examples ===")
 
+    # Summing values in a loop is a core skill used in analytics,
+    # budgeting apps, and score dashboards.
     scores = [88, 72, 95, 67, 81]
     total = 0
     for score in scores:
@@ -66,6 +80,7 @@ def mini_task_examples():
     print("Average score:", average)
 
     # Count vowels in a word.
+    # Similar idea is used in text analysis, spam filters, and search tools.
     word = "education"
     vowels = "aeiou"
     vowel_count = 0
