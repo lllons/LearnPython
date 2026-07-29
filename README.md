@@ -1,4 +1,4 @@
-# 🎓 LearnPython
+# 🎓 LearnPython 🎓
 
 Teach yourself Python — 15 short, runnable lessons that build on each other.
 
